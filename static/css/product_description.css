@@ -1,0 +1,139 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 25px;
+}
+
+/* Container for the entire page */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Product details section */
+.product-details {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    flex-basis: 30%;
+    margin-right: 20px;
+}
+
+
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.product-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-info a:hover {
+    color: #0056b3;
+}
+
+.product-info form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-info form button:hover {
+    background-color: #218838;
+}
+
+/* Platforms section */
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.platforms h2 {
+    display: inline-block; /* Changed to inline-block */
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center; /* Added to center the text */
+}
+
+
+.platform-product {
+    display: inline-block; /* Change to display horizontally */
+    width: auto; /* Remove width calculation */
+    margin: 35px; /* Adjust margin as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.platform-product .platform-image img {
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    border-radius: 10px; /* Adjust border-radius for curved edges */
+}
+
+.platform-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.platform-details p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Previously viewed products section */
+.prev-products {
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.prev-products h2 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.prev-product {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prev-product h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}

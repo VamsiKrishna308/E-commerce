@@ -1,0 +1,72 @@
+<!-- navbar.html -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}E-commerce System{% endblock %}</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <link href="{% static 'css/navbar.css' %}" rel="stylesheet">
+    <script src="{% static 'js/navbar.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between w-100">
+            <a class="navbar-brand" href="#">
+                <img alt="Logo" height="30" src="{% static 'images/logo.svg' %}">
+            </a>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="{% url 'dashboard' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+            </ul>
+
+            <form action="{% url 'search_products' %}" class="d-flex" method="get" role="search">
+                {% csrf_token %}
+                <input aria-label="Search" class="form-control me-2" name="searchTerm" placeholder="Search for products"
+                       type="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+
+        </div>
+
+        <div class="dropdown">
+            <button aria-expanded="false" class="btn dropdown-toggle" data-bs-toggle="dropdown" id="userDropdown"
+                    type="button">
+                <img alt="User Profile" height="30" src="{% static 'images/user.svg' %}">
+            </button>
+            <ul aria-labelledby="userDropdown" class="dropdown-menu">
+                {% if request.user.is_authenticated %}
+                <li class="user-info">
+                <li class="nav-item">
+                    <span class="nav-link">Welcome, {{ request.user.username }}</span>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %} ">Signup </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

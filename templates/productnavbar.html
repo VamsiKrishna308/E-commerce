@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Navbar</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/productsnavbar.css">
+</head>
+<body><!-- productnavbar.html -->
+<div class="left-section">
+    <a href="/dashboard/" data-button-text="Home"><img src="/static/images/Home.svg" alt="Home"></a>
+    <a href="/products/" data-button-text="Products"><img src="/static/images/Products.svg" alt="Products"></a>
+    <a href="/User/view-cart" data-button-text="Cart">
+        <img src="/static/images/Cart.svg" alt="Cart">
+        <span id="cartCount">{{ cart_count }}</span>
+    </a>
+</div>
+</body>
+

@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>PSPCS Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#">PSPCS></a></div>
+      <div class="buttons">
+        <a  href="{% url 'login' %}"><input type="button" value="Login" ></a>
+        <a  href="{% url 'register' %}"><input type="button" value="Register"></a>
+      </div>
+    </nav>
+    <div class="text-content">
+      <h2>Upgrade Your Style,<br> Your Choice.</h2>
+      <p>Explore our curated selection of mobile devices and clothing options, empowering you to elevate your style and make choices that reflect your unique taste and preferences</p>
+    </div>
+<footer class="footer mt-5">
+  <div class="container text-center">
+    <p>&copy; 2024 E-commerce Price Comparison System. All rights reserved.</p>
+  </div>
+</footer>
+ </body>
+</html>

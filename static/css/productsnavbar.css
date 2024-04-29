@@ -1,0 +1,97 @@
+.left-section {
+    background-color: rgb(224, 224, 224);
+    width: 50px; /* Adjust the width as needed */
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.left-section a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust font size as needed */
+    position: relative;
+}
+
+.left-section a img {
+    width: 1cm;
+    height: 1cm;
+    margin-right: 10px;
+}
+
+.left-section .user-profile-section {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.left-section .user-profile-section img {
+    width: 1cm;
+    height: 1cm;
+    margin-bottom: 10px;
+}
+
+.logout-btn {
+    font-style: italic;
+}
+
+.user-profile-section {
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.user-profile-section a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.user-profile-section img {
+    width: 1cm;
+    height: 1cm;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    margin-top: 5px;
+}
+
+.left-section a:hover::after,
+.left-section .user-profile-section:hover::after {
+    content: attr(data-button-text);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 5px;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    z-index: 1;
+}

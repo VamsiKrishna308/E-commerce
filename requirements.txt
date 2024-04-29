@@ -1,0 +1,6 @@
+Django
+pytz
+psycopg2
+numpy
+pandas
+requests

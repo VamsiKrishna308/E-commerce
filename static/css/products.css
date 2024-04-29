@@ -1,0 +1,96 @@
+/* Filter Section Styles */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+#price-filter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#price-filter option {
+    padding: 8px;
+}
+
+.filter-section button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff; /* Blue color for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-section button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container-fluid {
+    display: flex;
+}
+
+.right-section {
+    flex-grow: 1; /* Fill remaining space */
+    margin-left: 50px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-cart {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 50px;
+    flex-grow: 1;
+    max-width: calc(33.33% - 20px);
+
+}
+
+.product-cart h2 {
+    margin-bottom: 10px;
+}
+
+.product-cart img {
+    width: 300px; /* Set image width */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-cart p {
+    margin-bottom: 5px;
+}
+
+.product-cart .price {
+    font-weight: bold;
+    color: #008000; /* Green color for price */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #ccc;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
